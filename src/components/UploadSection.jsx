@@ -59,7 +59,7 @@ const UploadSection = ({ onUploadSuccess }) => {
     formData.append('pdf', file);
 
     try {
-      const response = await fetch('http://localhost:3000/api/upload', {
+      const response = await fetch('https://backend-cw0a.onrender.com/api/upload', {
         method: 'POST',
         body: formData,
       });
