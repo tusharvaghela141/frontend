@@ -48,7 +48,7 @@ const ChatInterface = ({ documentId, onCitationClick }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3000/api/chat', {
+      const response = await fetch('https://backend-cw0a.onrender.com/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ const ChatInterface = ({ documentId, onCitationClick }) => {
       }
     } catch (error) {
       const errorMsg = error.message.includes('fetch')
-        ? 'Cannot connect to backend. Make sure the backend server is running on http://localhost:3000'
+        ? 'Cannot connect to backend. Make sure the backend server is running on https://backend-cw0a.onrender.com'
         : `Error: ${error.message}`;
       
       setMessages(prev => [...prev, {

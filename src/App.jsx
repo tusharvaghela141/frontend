@@ -14,7 +14,7 @@ function App() {
   const handleUploadSuccess = (docId, file) => {
     setDocumentId(docId);
     setUploadedFile(file);
-    setPdfUrl(`http://localhost:3000/api/pdf/${docId}`);
+    setPdfUrl(`https://backend-cw0a.onrender.com/api/pdf/${docId}`);
     setCurrentPage(1);
   };
 
